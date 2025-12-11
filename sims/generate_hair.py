@@ -1,5 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+import matplotlib
+matplotlib.use('Agg')  # ADD THIS
+os.makedirs("../dist/generated", exist_ok=True)  # ADD THIS
 
 height = 1.87
 x = np.linspace(-0.4, 0.4, 600)
@@ -14,5 +18,5 @@ hair = np.clip(waves + grey + 0.6, 0, 1)
 plt.figure(figsize=(8,10))
 plt.contourf(X, Y, hair, levels=30, cmap='Greys', alpha=0.9)
 plt.axis('off')
-plt.savefig("../dist/generated/hair-silhouette.svg", bbox_inches='tight', pad_inches=0, transparent=True)
+plt.savefig("../dist/generated/hair-silhouette.svg", bbox_inches='tight', pad_inches=0, transparent=True)  # Updated path
 plt.close()
