@@ -1,1 +1,11 @@
+[build]
+  publish = "dist"
+  command = "npm run build && python3 sims/generate_cape.py && python3 sims/generate_hair.py"
 
+[build.environment]
+  PYTHON_VERSION = "3.12"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
