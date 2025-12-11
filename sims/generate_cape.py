@@ -1,5 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+import matplotlib
+matplotlib.use('Agg')  # ADD THIS: Headless backend for Netlify
+os.makedirs("../dist/generated", exist_ok=True)  # ADD THIS: Ensure folder exists
 
 # Your body measures
 height = 1.87
@@ -18,5 +22,5 @@ cross = np.clip(center + arms, 0, 1)
 plt.figure(figsize=(8,10))
 plt.imshow(1-cross, cmap='binary', extent=[-width,width,height*1.1,0])
 plt.axis('off')
-plt.savefig("../dist/generated/cape-pattern.svg", bbox_inches='tight', pad_inches=0, transparent=True)
+plt.savefig("../dist/generated/cape-pattern.svg", bbox_inches='tight', pad_inches=0, transparent=True)  # Updated path
 plt.close()
