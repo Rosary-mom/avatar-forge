@@ -1,3 +1,6 @@
-add generated folder
+npm i  # Install dependencies if not done
+python3 sims/generate_cape.py
+python3 sims/generate_hair.py
+python3 sims/generate_cybertruck.py
 
 
