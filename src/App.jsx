@@ -6,9 +6,9 @@ export default function App() {
   const [cybertruck, setCybertruck] = useState('')
 
   useEffect(() => {
-    setCape('./generated/cape-pattern.svg')  // Relative path
-    setHair('./generated/hair-silhouette.svg')  // Relative path
-    setCybertruck('./generated/cybertruck.svg')  // New Cybertruck overlay with BIOSEAL fractals
+    setCape('./generated/cape-pattern.svg')
+    setHair('./generated/hair-silhouette.svg')
+    setCybertruck('./generated/cybertruck.svg')
   }, [])
 
   return (
@@ -18,9 +18,9 @@ export default function App() {
       <p>1.87 m • 87 kg • 65 yo • ash-blond Cobain hair • Cybertruck pilgrim</p>
       
       <div style={{ margin: '3rem auto', position: 'relative', maxWidth: '100vw', animation: 'reveal 2s ease-in', filter: 'brightness(1.2) contrast(1.1)', boxShadow: '0 0 50px rgba(255,255,255,0.5)' }}>
-        {cybertruck && <img src={cybertruck} alt="Cybertruck Travel Home with BIOSEAL" style={{ position: 'absolute', bottom: 0, left: 0, width: '100vw', height: 'auto' }} />}
-        {cape && <img src={cape} alt="Quantum Templar Cape" style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: 'auto' }} />}
-        {hair && <img src={hair} style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: 'auto' }} />}
+        {cybertruck ? <img src={cybertruck} alt="Cybertruck Travel Home with BIOSEAL" style={{ position: 'absolute', bottom: 0, left: 0, width: '100vw', height: 'auto' }} /> : <p>Cybertruck loading...</p>}
+        {cape ? <img src={cape} alt="Quantum Templar Cape" style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: 'auto' }} /> : <p>Cape loading...</p>}
+        {hair ? <img src={hair} style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: 'auto' }} /> : <p>Hair loading...</p>}
       </div>
 
       <p>Live - refresh to see new generations</p>
