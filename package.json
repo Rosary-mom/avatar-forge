@@ -33,3 +33,22 @@ export default function App() {
     </div>
   )
 }
+{
+  "name": "avatar-forge",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prebuild": "python3 sims/generate_cape.py && python3 sims/generate_hair.py && python3 sims/generate_cybertruck.py",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^5.4.8"
+  }
+}
