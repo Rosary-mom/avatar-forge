@@ -1,38 +1,3 @@
-import { useEffect, useState } from 'react'
-
-export default function App() {
-  const [cape, setCape] = useState('')
-  const [hair, setHair] = useState('')
-  const [cybertruck, setCybertruck] = useState('')
-
-  useEffect(() => {
-    setCape('./generated/cape-pattern.svg')
-    setHair('./generated/hair-silhouette.svg')
-    setCybertruck('./generated/cybertruck.svg')
-  }, [])
-
-  return (
-    <div style={{ fontFamily: 'system-ui', textAlign: 'center', padding: '2rem', background: '#8B0000', color: '#fff', minHeight: '100vh' }}>
-      <h1>Rosary© ®™ Avatar Forge</h1>
-      <h2>2030 Templar – personalised for Rosary-mom</h2>
-      <p>1.87 m • 87 kg • 65 yo • ash-blond Cobain hair • Cybertruck pilgrim</p>
-      
-      <div style={{ margin: '3rem auto', position: 'relative', maxWidth: '100vw', animation: 'reveal 2s ease-in', filter: 'brightness(1.2) contrast(1.1)', boxShadow: '0 0 50px rgba(255,255,255,0.5)' }}>
-        {cybertruck && <img src={cybertruck} alt="Cybertruck Travel Home with BIOSEAL" style={{ position: 'absolute', bottom: 0, left: 0, width: '100vw', height: 'auto' }} />}
-        {cape && <img src={cape} alt="Quantum Templar Cape" style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: 'auto' }} />}
-        {hair && <img src={hair} style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: 'auto' }} />}
-      </div>
-
-      <p>Live - refresh to see new generations</p>
-      <style>{`
-        @keyframes reveal {
-          from { opacity: 0; transform: scale(0.9); }
-          to { opacity: 1; transform: scale(1); }
-        }
-      `}</style>
-    </div>
-  )
-}
 {
   "name": "avatar-forge",
   "version": "1.0.0",
@@ -48,7 +13,9 @@ export default function App() {
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.2",
+    "@vitejs
+/plugin-react": "^4.3.2",
     "vite": "^5.4.8"
   }
 }
+
