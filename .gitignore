@@ -1,1 +1,13 @@
+# Ignoriere Environment-Dateien
+.env
 
+# Ignoriere Node-Modules
+node_modules/
+
+# Ignoriere Builds
+build/
+dist/
+
+# Ignoriere OS-spezifische Files
+.DS_Store
+thumbs.db
